@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="2021/10/11"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        tools:text="CatName" />
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FADD9F"
+        app:layout_constraintBottom_toTopOf="@id/eat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/keikun"
+        app:layout_constraintLeft_toLeftOf="@id/underline"
+        app:layout_constraintBottom_toBottomOf="@id/underline"/>
+
+    <ListView
+        android:id="@+id/todoList"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:entries="@array/demo"
+        app:layout_constraintBottom_toBottomOf="@id/underline"
+        app:layout_constraintRight_toRightOf="@id/underline" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/eat"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="eating"
+        app:layout_constraintBottom_toTopOf="@id/ToDo"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/clean"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:text="cleaning"
+        app:layout_constraintBottom_toTopOf="@id/ToDo"
+        app:layout_constraintLeft_toRightOf="@id/eat" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:text="setting"
+        app:layout_constraintBottom_toTopOf="@id/ToDo"
+        app:layout_constraintLeft_toRightOf="@id/clean" />
+
+    <Button
+        android:id="@+id/ToDo"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:text="Add ToDo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="576dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="731dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

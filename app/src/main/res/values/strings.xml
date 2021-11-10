@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NewCatFirst</string>
+    <string-array name="settingList">
+        <item name ="prof">Profile</item>
+        <item>Sync</item>
+        <item>ToDo</item>
+    </string-array>
+    <string-array name="demo">
+        <item>d1</item>
+        <item>d2</item>
+        <item>d3</item>
+        <item>d4</item>
+        <item>d5</item>
+        <item>d6</item>
+        <item>d7</item>
+    </string-array>
+</resources>
